@@ -2,7 +2,7 @@
 
 This module deploys LogDNA and Sysdig agents onto an IKS cluster.
 
-![Deploy LogDNA and Sysdig Agents](../.docs/logdna_sysdig.png)
+![Deploy LogDNA and Sysdig Agents](./.docs/logdna_sysdig.png)
 
 ----
 
