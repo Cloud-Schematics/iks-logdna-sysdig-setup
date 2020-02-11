@@ -2,22 +2,23 @@
 # Account Variables
 ##############################################################################
 
-variable resource_group {
-  description = "Name of resource group to provision resources"
-  default     = "asset-development"
-}
-
 variable ibmcloud_apikey {
   description = "The IBM Cloud platform API key needed to deploy IAM enabled resources"
 }
 
+variable resource_group {
+  description = "Name of resource group to provision resources"
+  default     = "default"
+}
+
 variable ibm_region {
   description = "IBM Cloud region where all resources will be deployed"
-  default     = "eu-gb"
+  default     = "us-south"
 }
 
 variable unique_id {
   description = "The IBM Cloud platform API key needed to deploy IAM enabled resources"
+  default     = "log-mon-setup"
 }
 
 ##############################################################################
@@ -28,11 +29,11 @@ variable unique_id {
 ##############################################################################
 
 variable cluster_name {
-  description = "name for the iks cluster"
+  description = "Name for the iks cluster to deploy agents"
 }
 
 variable cluster_id {
-  description = "id of iks cluster"
+  description = "ID of iks cluster to deploy agents"
 }
 
 ##############################################################################
@@ -77,25 +78,5 @@ variable sysdig_image {
   description = "Image for Sysdig Agent"
   default     = "icr.io/ext/sysdig/agent:latest"
 }
-
-##############################################################################
-
-
-##############################################################################
-# Image pull secrets
-##############################################################################
-
-variable image_pull_secrets {
-  description = "Image pull secrets to copy to ibm-observe namespace"
-  default     = [
-    "jp-icr-io", 
-    "au-icr-io", 
-    "de-icr-io", 
-    "uk-icr-io",
-    "us-icr-io",
-    "icr-io"
-  ]
-}
-
 
 ##############################################################################
