@@ -48,8 +48,8 @@ variable logdna_name {
 }
 
 variable logdna_agent_image {
-  description = "ICR image for logdna agent"
-  default     = "uk.icr.io/asset-bp2i-test/logdna-agent:latest"
+  description = "Image for logdna agent"
+  default     = "logdna/logdna-agent:latest"
 }
 
 variable logdna_endpoint {
